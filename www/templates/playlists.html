@@ -1,0 +1,11 @@
+<ion-view view-title="Wisdom 4 Winning">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item item-thumbnail-left" ng-repeat="post in posts" href="#/app/posts/{{post.id}}">
+      <img scr="../img/ionic.png">
+        <h2>{{post.title}}</h2>
+        <p>{{}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

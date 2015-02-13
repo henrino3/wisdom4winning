@@ -1,0 +1,46 @@
+<ion-view view-title='Back' on-swipe-right="onSwipeRight()">
+  <ion-content>
+		    <div class="list card">
+		    		<div ng-hide="Postloaded" >
+					          <button class="button button-large button-clear button-assertive">
+					          <i class="icon ion-loading-c" ></i> Loading....
+					        </button>
+					    </div>
+				  <div class="item item-avatar">
+				    <img src="img/ed.jpg">
+				    <p>
+				    <h4>Pastor Ed Bayeibo</h4>
+				    <h6 class="royal">{{post.published | date:"MM/dd/yyyy @ h:mma"}}</h6></p>
+				  </div>
+
+				  <div class="item item-body">
+
+				    <h2 class="center">{{post.title}}</h2>
+				    <img class="full-image" src="{{post.images[0].url}}">
+				    <p ng-bind-html="post.content | rImg ">
+				     
+				    </p>
+				    <p>
+				      <a href="#" class="subdued">1 Like</a>
+				      <a href="#" class="subdued">5 Comments</a>
+				    </p>
+				  </div>
+
+				  <div class="item tabs tabs-secondary tabs-icon-left">
+				    <a class="tab-item" href="#">
+				      <i class="icon ion-thumbsup"></i>
+				      Like
+				    </a>
+				    <a class="tab-item" href="#">
+				      <i class="icon ion-chatbox"></i>
+				      Comment
+				    </a>
+				    <a class="tab-item" href="#">
+				      <i class="icon ion-share"></i>
+				      Share
+				    </a>
+		 		 </div>
+
+		</div>
+  </ion-content>
+</ion-view>

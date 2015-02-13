@@ -1,0 +1,29 @@
+<ion-view view-title='<span class="cHeader"><img class="hLogo" src="img/w4w.jpg">  Wisdom 4 Winning with Ed</span>'>
+
+  <ion-content>
+      <div class="bar bar-header bar-dark">
+      <h1 class="title">Devotional</h1>
+    </div>
+
+
+    <ion-list>
+      <ion-item>
+                
+    </ion-item>
+    <ion-item>
+    </ion-item>
+    <ion-item ng-hide="PostsLoaded" >
+          <button class="button button-large button-clear button-primary">
+          <i class="icon ion-loading-c" ></i> Loading....
+        </button>
+    </ion-item>
+      <ion-item class="item item-thumbnail-left" ng-repeat="post in posts" href="#/app/posts/{{post.id}}">
+      <img src="{{post.images[0].url}}">
+        <h2>{{post.title}}</h2>
+        <p>{{post.content | rHtml | limitTo:70 }}<br/>
+        <span class="small royal">Published on {{post.published | date:"MM/dd/yyyy @ h:mma"}}
+        </p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
